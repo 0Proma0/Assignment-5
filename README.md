@@ -10,20 +10,20 @@ Git is a distributed version control system that helps track code changes, colla
 
 ## Essential Git Commands
 
-### Setup
+* ### Setup
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 git config --list
 ```
 
-### Repository Management
+* ### Repository Management
 ```bash
 git init  # Initialize a new repository
 git clone REPOSITORY_URL  # Clone an existing repository
 ```
 
-### Staging and Committing
+* ### Staging and Committing
 ```bash
 git status  # Check status
 git add .  # Stage all changes
@@ -31,21 +31,21 @@ git commit -m "Commit message"  # Commit changes
 git log  # View commit history
 ```
 
-### Branching
+* ### Branching
 ```bash
 git branch  # List branches
 git checkout -b BRANCH_NAME  # Create and switch to a new branch
 git merge BRANCH_NAME  # Merge branches
 ```
 
-### Remote Repositories
+* ### Remote Repositories
 ```bash
 git remote add origin REPOSITORY_URL  # Add remote repository
 git push origin BRANCH_NAME  # Push changes
 git pull origin BRANCH_NAME  # Pull changes
 ```
 
-### Undoing Changes
+* ### Undoing Changes
 ```bash
 git checkout -- FILE_NAME  # Discard changes
 git reset --soft COMMIT_ID  # Undo commits (keep changes)
