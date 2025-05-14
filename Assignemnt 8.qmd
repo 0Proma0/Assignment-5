@@ -1,13 +1,18 @@
 ---
 title: "Assignment 8"
-format: html
-editor: visual
+project:
+  type: website
+format:
+  html:
+    self-contained: true
+resources:
+  - data/15.RData
 ---
 
 ## Original plot
 
 ```{r,fig.width=12,fig.align='center',fig.height=15,echo=FALSE,message=FALSE,warning=FALSE}
-load("~/Raport project/15.RData")
+load("~/dane_wykres.RData")
 library(ggplot2)
 library(dplyr)
 library(tidyr)
