@@ -1,0 +1,10 @@
+name: toolkit_project
+title:
+username: proma
+account: proma
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14821180
+bundleId: 10339569
+url: https://proma.shinyapps.io/toolkit_project/
+version: 1
