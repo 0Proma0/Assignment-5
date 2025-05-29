@@ -4,6 +4,8 @@ library(rsconnect)
 # Load modules
 source("R/stat_analysis_ui.R")
 source("R/stat_analysis_server.R")
+source("R/omics_ui.R")
+source("R/omics_server.R")
 
 
 ui <- dashboardPage(
@@ -21,7 +23,7 @@ ui <- dashboardPage(
       tabItem(tabName = "stat_analysis",
               stat_analysis_ui("stat")),
       tabItem(tabName = "omics_analysis",
-              h3("To be implemented...")),
+              omics_ui("omics")),
       tabItem(tabName = "blast_analysis",
               h3("To be implemented..."))
     )
@@ -30,6 +32,7 @@ ui <- dashboardPage(
 
 server <- function(input, output, session) {
   stat_analysis_server("stat")
+  omics_server("omics")
 }
 
 shinyApp(ui, server)
