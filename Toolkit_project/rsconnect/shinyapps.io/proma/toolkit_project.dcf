@@ -5,6 +5,6 @@ account: proma
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14821180
-bundleId: 10339569
+bundleId: 10374322
 url: https://proma.shinyapps.io/toolkit_project/
 version: 1

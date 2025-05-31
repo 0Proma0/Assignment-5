@@ -586,18 +586,6 @@ stat_analysis_server <- function(id) {
         output$feedback_status <- renderText("❗ Feedback exceeds the 200-word limit.")
         return()
       }
-      # Save feedback to a file (dont work on server because cant view file system in shinyapps.io)
-      #timestamp <- format(Sys.time(), "%Y%m%d_%H%M%S")
-      #filename <- paste0("feedback_", timestamp, ".txt")
-      #filepath <- file.path("data", filename)
-      #if (!dir.exists("data")) dir.create("data")
-      
-      #save_msg <- tryCatch({
-      #  writeLines(feedback, con = filepath)
-      #  paste0("✅ Feedback saved as: ", filename)
-      #}, error = function(e) {
-      #  paste("❌ Failed to save feedback:", e$message)
-      #})
       
       send_msg <- tryCatch({
         send_feedback_formspree(feedback)
