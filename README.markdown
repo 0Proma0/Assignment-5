@@ -1,21 +1,27 @@
 # Data Analysis Toolkit
 
-The **Data Analysis Toolkit** is a Shiny-based R application designed to provide an interactive and user-friendly platform for performing statistical, omics, and protein sequence analyses. The application is divided into three main modules: **Statistical Data Analysis**, **Omics Data Analysis**, and **Protein BLAST Toolkit**. Each module offers a suite of tools for data exploration, visualization, and analysis, catering to researchers, bioinformaticians, and data scientists.
+The **Data Analysis Toolkit** is a Shiny-based R application designed to provide an interactive and user-friendly platform for performing statistical, omics, and protein sequence analyses. The application is divided into three main modules: **Statistical Data Analysis**, **Omics Data Analysis**, and **Protein BLAST Toolkit**. 
+
+You can access it remotely on shiny server via link: <u>https://proma.shinyapps.io/toolkit_project/ </u>
+
+(only 24h of active usage per month divided between users)
 
 This README provides an overview of the toolkit's features, installation instructions, usage guide, and details on user capabilities for each module.
 
 ## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Modules](#modules)
-  - [Statistical Data Analysis](#statistical-data-analysis)
-  - [Omics Data Analysis](#omics-data-analysis)
-  - [Protein BLAST Toolkit](#protein-blast-toolkit)
-- [Contributing](#contributing)
-- [License](#license)
+
+- Features
+- Installation
+- Usage
+- Modules
+  - Statistical Data Analysis
+  - Omics Data Analysis
+  - Protein BLAST Toolkit
+- Contributing
+- License
 
 ## Features
+
 - **Interactive Dashboards**: Built with `shinydashboard`, the toolkit offers a responsive interface with sidebar navigation for easy access to different analysis modules.
 - **Data Import Flexibility**: Supports multiple file formats (CSV, TSV, Excel) and built-in datasets for omics analysis.
 - **Visualization Tools**: Includes dynamic plots (boxplots, histograms, PCA, density plots, MA plots, scatterplots) powered by `ggplot2` and `plotly`.
@@ -25,12 +31,14 @@ This README provides an overview of the toolkit's features, installation instruc
 - **Customizable Outputs**: Allows users to download data, results, and plots in various formats (CSV, TXT, PNG).
 - **Debugging Support**: Includes debug outputs for troubleshooting data issues in the omics module.
 
-## Installation
+## Installation ( for local usage )
 
 ### Prerequisites
+
 - **R** (version 4.0 or higher)
 - **RStudio** (recommended for development)
 - Required R packages:
+
   ```R
   install.packages(c(
     "shiny", "shinydashboard", "rsconnect", "httr", "jsonlite", "DT",
@@ -41,12 +49,15 @@ This README provides an overview of the toolkit's features, installation instruc
   ```
 
 ### Setup
+
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/your-username/data-analysis-toolkit.git
+   git clone https://github.com/0Proma0/Assignments-for-Toolkit.git
    cd data-analysis-toolkit
    ```
 2. Ensure the project directory structure is as follows:
+
    ```
    data-analysis-toolkit/
    ├── R/
@@ -59,9 +70,9 @@ This README provides an overview of the toolkit's features, installation instruc
    ├── data/
    │   ├── TPMs_table_100genes.csv
    ├── app.R
-   └── README.md
    ```
 3. Place the `TPMs_table_100genes.csv` file in the `data/` directory or create a sample dataset:
+
    ```R
    dir.create("data", showWarnings = FALSE)
    sample_data <- data.frame(
@@ -73,24 +84,19 @@ This README provides an overview of the toolkit's features, installation instruc
    write.csv(sample_data, "data/TPMs_table_100genes.csv")
    ```
 4. Run the application:
+
    ```R
    setwd("path/to/data-analysis-toolkit")
    shiny::runApp()
    ```
 
-### Deployment
-To deploy the app to shinyapps.io:
-```R
-library(rsconnect)
-rsconnect::deployApp()
-```
-Ensure you have a shinyapps.io account and the necessary credentials configured.
+### 
 
 ## Usage
+
 1. Launch the app in RStudio or a browser via `shiny::runApp()`.
 2. Navigate through the sidebar menu to select a module: **Statistical Analysis**, **Omics Analysis**, or **BLAST & Hits**.
 3. Follow the module-specific instructions below to interact with the tools.
-4. Use the debug outputs (in the omics module) or browser console to troubleshoot issues.
 
 ## Modules
 
@@ -99,6 +105,7 @@ Ensure you have a shinyapps.io account and the necessary credentials configured.
 The **Statistical Data Analysis** module provides tools for importing, transforming, visualizing, and analyzing tabular data, with a focus on statistical testing and data exploration.
 
 #### User Abilities
+
 - **Data Import**:
   - Upload files in CSV, TSV, TXT, or Excel formats.
   - Specify file type, separator, quote character, and header presence.
@@ -122,6 +129,7 @@ The **Statistical Data Analysis** module provides tools for importing, transform
   - Reset data to clear transformations and filters.
 
 #### Example Workflow
+
 1. Upload a CSV file or generate synthetic data with 2 groups and 50 points each.
 2. Filter columns to focus on numeric variables.
 3. Transform data to long format for grouped analysis.
@@ -134,12 +142,13 @@ The **Statistical Data Analysis** module provides tools for importing, transform
 The **Omics Data Analysis** module is designed for analyzing transcriptomics or proteomics data, offering interactive plots and tables for quality control and gene expression analysis.
 
 #### User Abilities
+
 - **Data Import**:
   - Load the built-in `TPMs_table_100genes.csv` dataset or upload a custom CSV/TSV file (up to 100 MB).
   - Files must have gene/protein names as row names and numeric expression values in columns.
 - **Data Filtering**:
   - Select numeric columns for analysis via a dynamic dropdown.
-  - Filter genes by minimum sum of expression using a slider (0 to 1000).
+  - Filter genes by minimum sum of expression using a slider.
 - **Visualizations**:
   - **Data Table**: View filtered data in an interactive DataTable with color-coded cells (blue for low, white for medium, red for high expression).
   - **QC Plot (Advanced)**:
@@ -155,10 +164,12 @@ The **Omics Data Analysis** module is designed for analyzing transcriptomics or 
   - Download filtered data as a CSV file.
 
 #### Notes
+
 - Blue and red colors in plots represent low and high expression values, respectively, aiding in pattern identification.
 - The barplot feature is currently bugged; users may see an empty gene dropdown or no plot. Debugging is ongoing (see issue #1).
 
 #### Example Workflow
+
 1. Select `TPMs_table_100genes` as the data source.
 2. Choose numeric columns and set a minimum expression filter (e.g., 10).
 3. View the filtered data table with color-coded expression values.
@@ -172,6 +183,7 @@ The **Omics Data Analysis** module is designed for analyzing transcriptomics or 
 The **Protein BLAST Toolkit** module enables users to search for protein sequences, retrieve FASTA files, run BLASTp searches, and analyze results through tables and plots.
 
 #### User Abilities
+
 - **Protein Search and FASTA Retrieval**:
   - Search UniProt for proteins by name and organism (e.g., "p53" in "Homo sapiens").
   - Select a protein from search results to retrieve its FASTA sequence.
@@ -203,26 +215,30 @@ The **Protein BLAST Toolkit** module enables users to search for protein sequenc
   - View status messages for BLAST job progress or failures.
 
 #### Example Workflow
+
 1. Search for "p53" in "Homo sapiens" and select a protein from the results.
 2. Load the FASTA sequence or upload a custom FASTA file.
 3. Run BLASTp and wait for results (up to 90 seconds).
-4. Filter the results table by E-value < 1e-10 and Identity > 50%.
+4. Filter the results table by E-value &lt; 1e-10 and Identity &gt; 50%.
 5. Create a scatterplot of E-value vs. Bit Score with custom colors.
 6. Download the filtered results and plot.
 
 ## Contributing
+
 Contributions are welcome! To contribute:
+
 1. Fork the repository.
 2. Create a feature branch (`git checkout -b feature/new-feature`).
 3. Commit changes (`git commit -m "Add new feature"`).
 4. Push to the branch (`git push origin feature/new-feature`).
 5. Open a Pull Request.
 
-Please report bugs or suggest features via GitHub Issues.
+Please report bugs or suggest features via GitHub Issues or via Statistical Analysis feedback form.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 ---
 
-*Built with ❤️ using R and Shiny. For questions, contact the maintainer at [your-email@example.com].*
+*Developers: Makar Dorohuntsev, Aleksandra Janik, Weronika Lepiarz*
