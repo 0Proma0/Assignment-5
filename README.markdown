@@ -241,7 +241,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-*Developers: 
+*Developers<br>: 
 Makar Dorohuntsev (Statistics module, modules integration and debugging)<br>
 Aleksandra Janik (Omics module)<br>
 Weronika Lepiarz (Blast module)<br>*
