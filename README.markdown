@@ -219,7 +219,7 @@ The **Protein BLAST Toolkit** module enables users to search for protein sequenc
 1. Search for "p53" in "Homo sapiens" and select a protein from the results.
 2. Load the FASTA sequence or upload a custom FASTA file.
 3. Run BLASTp and wait for results (up to 90 seconds).
-4. Filter the results table by E-value &lt; 1e-10 and Identity &gt; 50%.
+4. Filter the results table by E-value &lt; 1e-10 and Identity &gt; 50% and select Bit Score in filters.
 5. Create a scatterplot of E-value vs. Bit Score with custom colors.
 6. Download the filtered results and plot.
 
@@ -241,4 +241,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-*Developers: Makar Dorohuntsev, Aleksandra Janik, Weronika Lepiarz*
+*Developers: 
+Makar Dorohuntsev (Statistics module, modules integration and debugging)
+Aleksandra Janik (Omics module)
+Weronika Lepiarz (Blast module)*
