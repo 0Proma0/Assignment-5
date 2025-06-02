@@ -5,7 +5,6 @@ library(DT)
 library(ggplot2)
 library(colourpicker)
 
-# ---- Helper functions ----
 search_uniprot <- function(protein, organism) {
   base_url <- "https://rest.uniprot.org/uniprotkb/search"
   query <- paste0(protein, " AND organism_name:", organism)
@@ -116,7 +115,6 @@ parse_blast_json <- function(json_text) {
   return(NULL)
 }
 
-# ---- Server logic ----
 blast_server <- function(input, output, session) {
   proteins <- reactiveVal(NULL)
   fasta_seq <- reactiveVal(NULL)
