@@ -235,10 +235,33 @@ Contributions are welcome! To contribute:
 
 Please report bugs or suggest features via GitHub Issues or via Statistical Analysis feedback form.
 
-## License
+## License and Citations
 
 This project is licensed under the MIT License. See the LICENSE file for details.
+This project relies on the following R packages (versions as of October 18, 2023):
 
+- `shiny (2.0.1)`: Web application framework for R. Author: RStudio Team. [CRAN](https://cran.r-project.org/web/packages/shiny/index.html), [GitHub](https://github.com/rstudio/shiny)
+- `shinyBS (0.61.1)`: Bootstrap components for Shiny. Author: Eric Bailey. [CRAN](https://cran.r-project.org/web/packages/shinyBS/index.html), [GitHub](https://github.com/ebailey78/shinyBS)
+- `shinyjs (2.1.0)`: JavaScript functions for Shiny. Author: Dean Attali. [CRAN](https://cran.r-project.org/web/packages/shinyjs/index.html), [GitHub](https://github.com/daattali/shinyjs)
+- `shinyWidgets (0.8.7)`: Enhanced widgets for Shiny. Authors: Victor Perrier et al. [CRAN](https://cran.r-project.org/web/packages/shinyWidgets/index.html), [GitHub](https://github.com/dreamRs/shinyWidgets)
+- `shinythemes (1.2.0)`: Themes for Shiny. Author: Winston Chang. [CRAN](https://cran.r-project.org/web/packages/shinythemes/index.html), [GitHub](https://github.com/rstudio/shinythemes)
+- `shinydashboard (0.7.2)`: Dashboard interface for Shiny. Authors: Winston Chang et al. [CRAN](https://cran.r-project.org/web/packages/shinydashboard/index.html), [GitHub](https://github.com/rstudio/shinydashboard)
+- `rsconnect (1.3.1)`: Deployment to Shinyapps.io. Author: RStudio Team. [CRAN](https://cran.r-project.org/web/packages/rsconnect/index.html), [GitHub](https://github.com/rstudio/rsconnect)
+- `httr (1.4.7)`: HTTP interface for R. Author: Hadley Wickham. [CRAN](https://cran.r-project.org/web/packages/httr/index.html), [GitHub](https://github.com/r-lib/httr)
+- `jsonlite (1.8.8)`: JSON parsing in R. Authors: Jeroen Ooms et al. [CRAN](https://cran.r-project.org/web/packages/jsonlite/index.html), [GitHub](https://github.com/jeroenooms/jsonlite)
+- `DT (0.33)`: Interactive tables in R. Authors: Yihui Xie et al. [CRAN](https://cran.r-project.org/web/packages/DT/index.html), [GitHub](https://github.com/rstudio/DT)
+- `ggplot2 (3.5.1)`: Data visualizations. Authors: Hadley Wickham et al. [CRAN](https://cran.r-project.org/web/packages/ggplot2/index.html), [GitHub](https://github.com/tidyverse/ggplot2)
+- `colourpicker (1.3.0)`: Color picker for Shiny. Author: Dean Attali. [CRAN](https://cran.r-project.org/web/packages/colourpicker/index.html), [GitHub](https://github.com/daattali/colourpicker)
+- `plotly (4.10.4)`: Interactive plots. Authors: Carson Sievert et al. [CRAN](https://cran.r-project.org/web/packages/plotly/index.html), [GitHub](https://github.com/plotly/plotly.R)
+- `pheatmap (1.0.12)`: Heatmaps in R. Author: Raivo Kolde. [CRAN](https://cran.r-project.org/web/packages/pheatmap/index.html)
+- `reshape2 (1.4.4)`: Data reshaping. Author: Hadley Wickham. [CRAN](https://cran.r-project.org/web/packages/reshape2/index.html), [GitHub](https://github.com/hadley/reshape)
+- `tidyverse (2.0.0)`: Suite of data analysis packages. Authors: Hadley Wickham et al. [CRAN](https://cran.r-project.org/web/packages/tidyverse/index.html), [GitHub](https://github.com/tidyverse/tidyverse)
+- `readxl (1.4.3)`: Excel file reading. Authors: Hadley Wickham et al. [CRAN](https://cran.r-project.org/web/packages/readxl/index.html), [GitHub](https://github.com/tidyverse/readxl)
+- `car (3.1-2)`: Regression analysis. Authors: John Fox et al. [CRAN](https://cran.r-project.org/web/packages/car/index.html)
+- `shiny.i18n (0.3.0)`: Internationalization for Shiny. Author: Appsilon. [CRAN](https://cran.r-project.org/web/packages/shiny.i18n/index.html), [GitHub](https://github.com/Appsilon/shiny.i18n)
+- `viridis (0.6.5)`: Color scales for visualizations. Author: Simon Garnier. [CRAN](https://cran.r-project.org/web/packages/viridis/index.html), [GitHub](https://github.com/sjmgarnier/viridis)
+- Hosted on [Shinyapps.io](https://www.shinyapps.io/).
+- Feedback collected via [Formspree.io](https://formspree.io/).
 ---
 
 *Developers:<br> 
