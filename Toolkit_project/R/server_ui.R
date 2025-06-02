@@ -15,7 +15,6 @@ blast_server <- function(id) {
       fasta_seq <- reactiveVal(NULL)
       blast_results <- reactiveVal(NULL)
       
-      # ---- Helper functions ----
       search_uniprot <- function(protein, organism) {
         base_url <- "https://rest.uniprot.org/uniprotkb/search"
         query <- paste0(protein, " AND organism_name:", organism)
@@ -126,7 +125,6 @@ blast_server <- function(id) {
         return(NULL)
       }
       
-      # ---- Server logic ----
       observeEvent(input$search, {
         result <- search_uniprot(input$protein_name, input$organism)
         if (is.null(result)) {
