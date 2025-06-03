@@ -260,6 +260,8 @@ This project relies on the following R packages (versions as of October 18, 2023
 - `car (3.1-2)`: Regression analysis. Authors: John Fox et al. [CRAN](https://cran.r-project.org/web/packages/car/index.html)
 - `shiny.i18n (0.3.0)`: Internationalization for Shiny. Author: Appsilon. [CRAN](https://cran.r-project.org/web/packages/shiny.i18n/index.html), [GitHub](https://github.com/Appsilon/shiny.i18n)
 - `viridis (0.6.5)`: Color scales for visualizations. Author: Simon Garnier. [CRAN](https://cran.r-project.org/web/packages/viridis/index.html), [GitHub](https://github.com/sjmgarnier/viridis)
+- BLAST: Altschul et al. (1990). [Website](https://blast.ncbi.nlm.nih.gov/)
+- UniProt: The UniProt Consortium (2021). [Website](https://www.uniprot.org/)
 - Hosted on [Shinyapps.io](https://www.shinyapps.io/).
 - Feedback collected via [Formspree.io](https://formspree.io/).
 ---
